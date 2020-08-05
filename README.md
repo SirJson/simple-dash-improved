@@ -4,7 +4,7 @@ This is my personal fork of simple-dash where I want to give back some of the mo
 
 ## How it differs from upstream
 
-- Fork Awesome instead of Font Awesome
+- Fork Awesome + Line Awesome instead of Font Awesome
   - The included version wasn't up to date at this point and having a free option seems to me the better choice
 - Upgraded the Javascript Syntax
   - It's 2020 and I can't think of any reason to install Internet Explorer
