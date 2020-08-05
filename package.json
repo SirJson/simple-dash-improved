@@ -1,0 +1,23 @@
+{
+  "name": "simple-dash-improved",
+  "version": "1.1.0",
+  "description": "This is my personal fork of simple-dash where I want to give back some of the mods and improvements I thought are neat.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirJson/simple-dash-improved.git"
+  },
+  "keywords": [],
+  "author": "SirJson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SirJson/simple-dash-improved/issues"
+  },
+  "homepage": "https://github.com/SirJson/simple-dash-improved#readme",
+  "dependencies": {
+    "monaco-editor": "^0.20.0"
+  }
+}
