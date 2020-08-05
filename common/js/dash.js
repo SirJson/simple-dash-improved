@@ -20,7 +20,7 @@ function addTriangleTo(target) {
 async function main() {
     const configJson = window.localStorage.getItem("config");
     if (!configJson) {
-        const setupFile = await fetch("config.setup.json");
+        const setupFile = await fetch("config.json");
         if (!setupFile.ok) {
             fail(
                 `Failed to load setup file (${setupFile.status}): ${setupFile.statusText}`,
