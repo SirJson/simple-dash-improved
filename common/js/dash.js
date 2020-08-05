@@ -17,8 +17,28 @@ function addTriangleTo(target) {
     target.style["background-size"] = "cover";
 }
 
+function renderConfig(config) {
+    document.title = config.title;
+
+    let itemlistHTML = "";
+    for (let i = 0; i < config.items.length; i++) {
+        let item = config.items[i];
+        itemlistHTML +=
+            '<a href="' +
+            item.link +
+            '" title="' +
+            item.alt +
+            '"><i class="' +
+            item.icon +
+            ' fa-fw"></i></a>';
+    }
+    document.getElementById("itemlist").innerHTML = itemlistHTML;
+}
+
 async function main() {
     const configJson = window.localStorage.getItem("config");
+    let config = null;
+
     if (!configJson) {
         const setupFile = await fetch("config.json");
         if (!setupFile.ok) {
@@ -29,28 +49,15 @@ async function main() {
         }
         const setupConfig = await setupFile.json();
         window.localStorage.setItem("config", JSON.stringify(setupConfig));
-        config = setupFile;
+        config = setupConfig;
         console.info("No local config found! Using setup config");
     } else {
         console.info("Loading config from local storage");
-        const config = JSON.parse(configJson);
+        config = JSON.parse(configJson);
         console.log(config);
-        document.title = config.title;
-
-        let itemlistHTML = "";
-        for (let i = 0; i < config.items.length; i++) {
-            let item = config.items[i];
-            itemlistHTML +=
-                '<a href="' +
-                item.link +
-                '" title="' +
-                item.alt +
-                '"><i class="' +
-                item.icon +
-                ' fa-fw"></i></a>';
-        }
-        document.getElementById("itemlist").innerHTML = itemlistHTML;
     }
+
+    renderConfig(config);
 
     //TODO: Maybe we can do better?
     let resizeTimer;

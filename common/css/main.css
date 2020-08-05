@@ -9,13 +9,6 @@ body {
     background-attachment: fixed;
 }
 
-.github-corner {
-    opacity: 0.4;
-}
-.github-corner:hover {
-    opacity: 1;
-}
-
 #wrapper {
     height: 100%;
     display: grid;
@@ -45,9 +38,6 @@ body {
     padding: 15px;
     margin: 0 auto;
 }
-
-
-
 
 /* link colors */
 #itemlist a {

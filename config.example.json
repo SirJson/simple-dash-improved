@@ -1,20 +1,21 @@
 {
-	"title" : "Your Homepage Title",
-	"items" : [
-		{
-			"alt" : "Github",
-			"icon" : "fab fa-github",
-			"link" : "https://github.com/kutyla-philipp"
-		},
-		{
-			"alt" : "Twitter",
-			"icon" : "fab fa-twitter",
-			"link" : "https://twitter.com/Kukielka_"
-		},
-		{
-			"alt" : "Docker Hub",
-			"icon" : "fab fa-docker",
-			"link" : "https://hub.docker.com/u/kukielka/"
-		}
-	]
+    "title" : "Your Homepage Title",
+    "schemaVersion": 1,
+    "items" : [
+        {
+            "alt" : "Github",
+            "icon" : "fab fa-github",
+            "link" : "https://github.com/kutyla-philipp"
+        },
+        {
+            "alt" : "Twitter",
+            "icon" : "fab fa-twitter",
+            "link" : "https://twitter.com/Kukielka_"
+        },
+        {
+            "alt" : "Docker Hub",
+            "icon" : "fab fa-docker",
+            "link" : "https://hub.docker.com/u/kukielka/"
+        }
+    ]
 }

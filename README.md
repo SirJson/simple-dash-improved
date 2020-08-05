@@ -14,4 +14,4 @@ This is my personal fork of simple-dash where I want to give back some of the mo
 ## Upcomming
 
 - A Chrome / Firefox-like Online Searchbar
-  - For me simple-dash replaces the new tab option and I always missed the direct search from that page.
+  - For me simple-dash replaces the new tab option and I always missed the direct search from that page
