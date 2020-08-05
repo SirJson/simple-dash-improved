@@ -1,71 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Loading...</title>
+    <head>
+        <title>Loading...</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="common/css/fork-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="common/css/v5-compat.min.css" />
-		<link rel="stylesheet" type="text/css" href="common/css/main.css" />
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	</head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" type="text/css" href="common/css/fork-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="common/css/v5-compat.min.css" />
+        <link rel="stylesheet" type="text/css" href="common/css/main.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </head>
 
-	<body id="homepage">
+    <body id="homepage">
 
-		<div id="wrapper">
-			<div id="itemlist">
-				<a title="Loading..."><i class="fa-spin fas fa-spinner fa-fw"></i></a>
-			</div>
-		</div>
+        <div id="wrapper">
+            <div id="itemlist">
+                <a title="Loading..."><i class="fa-spin fas fa-spinner fa-fw"></i></a>
+            </div>
+        </div>
 
-		<script src="common/js/trianglify.min.js"></script>
-		<script>
-			var request = new XMLHttpRequest();
-			request.overrideMimeType("application/json");
-			request.open("GET", 'config.json');
-			request.onload = function () {
-				if (request.status >= 200 && request.status < 400) {
-					var config = JSON.parse(this.response);
-					console.log(config);
-					document.title = config.title;
-
-					var itemlistHTML = '';
-					for (var i = 0; i < config.items.length; i++) {
-						var item = config.items[i];
-						itemlistHTML += '<a href="'+item.link+'" title="'+item.alt+'"><i class="'+item.icon+' fa-fw"></i></a>';
-					}
-					document.getElementById("itemlist").innerHTML = itemlistHTML;
-				} else {
-					var error_text = "Error: "+request.status;
-					console.error(error_text);
-					document.title = error_text;
-				}
-			}
-			request.send(null);
-
-			function addTriangleTo(target) {
-				var dimensions = target.getClientRects()[0];
-				var pattern = Trianglify({
-					width: dimensions.width,
-					height: dimensions.height
-				});
-
-				target.style['background-image'] = 'url(' + pattern.png() + ')';
-				target.style['background-size'] = 'cover';
-				target.style['-webkit-background-size'] = 'cover';
-				target.style['-moz-background-size'] = 'cover';
-				target.style['-o-background-size'] = 'cover';
-			}
-
-			var resizeTimer;
-			window.addEventListener("resize", function () {
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(function() {
-					addTriangleTo(homepage);
-				}, 400);
-			})
-
-			addTriangleTo(homepage);
-		</script>
-	</body>
+        <script src="common/js/trianglify.min.js"></script>
+        <script src="common/js/dash.js"></script>
+    </body>
 </html>
