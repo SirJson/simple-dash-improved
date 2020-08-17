@@ -3,11 +3,7 @@ favicon.ico
 fork-awesome.css
 line-awesome.css
 v5-compat.css
-common/js/monaco/min/vs/
-common/js/monaco/min/vs/basic-languages
-common/js/monaco/min/vs/editor
-common/js/monaco/min/vs/language
-common/js/monaco/min/vs/loader.js
+
 icons2json
 # Created by https://www.toptal.com/developers/gitignore/api/node
 # Edit at https://www.toptal.com/developers/gitignore?templates=node
