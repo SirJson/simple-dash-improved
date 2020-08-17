@@ -12,8 +12,29 @@ body {
 #wrapper {
     height: 100%;
     display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(3,1fr);
+}
+#toolbar {
+    grid-row:1;
+    grid-column: 3;
+    display: flex;
+    font-size: 2em;
+
+    padding: 8px;
+    justify-content: end;
+align-items: baseline;
+}
+.tool {
+    background: rgba(0, 0, 0, .4) !important;
+    height: auto;
+    padding: 8px;
+    border-radius: 6px !important;
+    color: white !important;
 }
 #itemlist {
+    grid-row:2;
+    grid-column: 2;
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;

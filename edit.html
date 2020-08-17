@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="common/css/fork-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="common/css/v5-compat.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="common/css/line-awesome.min.css"
+        />
+        <link rel="stylesheet" type="text/css" href="common/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="common/css/editor.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <title>Edit dashboard</title>
+    </head>
+    <body>
+        <div class="layout">
+            <header>
+                <h1>Edit Dashboard</h1>
+                <a id="savebnt" >Save & Back</a>
+                <a id="cancelbnt" >Discard</a>
+            </header>
+            <main id="editorbox"></main>
+            <aside>
+                <header><h2>Search icon</h2></header>
+                <section>
+                  <iframe width="100%" height="100%" src="https://icons8.com/line-awesome" frameborder="0"></iframe>
+                </section>
+                <footer>
+                    <input id="searchinput" type="text" />
+                </footer>
+            </aside>
+        </div>
+        <script src="common/js/common.js"></script>
+        <script src="common/js/trianglify.min.js"></script>
+        <script src="common/js/edit.js"></script>
+        <script src="common/js/monaco/min/vs/loader.js"></script>
+        <script>
+            require.config({ paths: { vs: "common/js/monaco/min/vs" } });
+            require(["vs/editor/editor.main"], function () {
+                let editor = monaco.editor.create(
+                    document.getElementById("editorbox"),
+                    {
+                        value: "",
+                        language: "json",
+                        renderWhitespace: "all",
+                        theme: "vs-dark"
+                    },
+                );
+                (async () => {
+                  await editMain(editor);
+              })();
+            });
+        </script>
+    </body>
+</html>
