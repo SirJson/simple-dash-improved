@@ -1,17 +1,17 @@
 # simple-dash-improved
 
-This is my personal fork of simple-dash where I want to give back some of the mods and improvements I thought are neat.
+This is my personal fork of simple-dash where I want to give back some mods and improvements I thought are neat.
 
-## How it differs from upstream
+## How it is different from upstream
 
 - Fork Awesome + Line Awesome instead of Font Awesome
   - The included version wasn't up to date at this point and having a free option seems to me the better choice
-- Upgraded the Javascript Syntax
+- Upgraded the JavaScript Syntax
   - It's 2020 and I can't think of any reason to install Internet Explorer
 - Config is now saved and used locally
-  - It makes customizaion and offline usage possible. For now the config only saved locally and loaded locally
+- Includes the Monaco Editor for Dashboard local customization
 
-## Upcomming
+## Upcoming
 
-- A Chrome / Firefox-like Online Searchbar
-  - For me simple-dash replaces the new tab option and I always missed the direct search from that page
+- A Chrome / Firefox-like Online Search bar
+- Fuzzy search icons and their class names inside the customization editor.
