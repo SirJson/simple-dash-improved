@@ -23,39 +23,45 @@ body {
     gap: 8px;
 }
 
+header {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    margin: 8px;
+}
 
-    header {
-        grid-row: 1;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        gap: 32px;
-    }
+header > a {
+    color: #ffffff;
+    font-size: 10pt;
+    font-weight: 500;
+    cursor: pointer;
+}
 
-    header > a {
-        color: #ffffff;
-        font-size: 10pt;
-        font-weight: 500;
-        cursor: pointer;
-    }
+header > a:hover {
+    color: #0063b1;
+    font-weight: 600;
+}
 
-    header > a:hover {
-        color: #0063B1;
-        font-weight: 600;
-    }
+a {
+    border: #212121 1px solid;
+    padding: 8px;
+    background: #1E1E1E;
+}
 
 header > h1 {
-    padding: 0.5rem;
     font-weight: 300;
     font-size: 24pt;
+    margin: 16px 8px;
 }
 
 header > h2 {
-    padding: 0.5rem;
     font-weight: 300;
     font-size: 18pt;
+    margin:24px 8px 8px 8px;
 }
 
 main {
@@ -74,16 +80,14 @@ aside {
     width: 15vw;
     flex-direction: column;
     align-items: stretch;
-    justify-content: center;
     gap: 16px;
     background: #212121;
 }
 aside > section {
     height: auto;
     width: 15vw;
-    min-height: 35vw;
+    min-height: 85%;
 }
-
 
 listbox {
     background: #aaaaaa66;
@@ -102,7 +106,6 @@ aside > footer {
     align-items: stretch;
     justify-content: stretch;
 }
-
 
 aside > header {
     width: 15vw;

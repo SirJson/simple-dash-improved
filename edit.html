@@ -26,20 +26,26 @@
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
         <title>Edit dashboard</title>
     </head>
-    <body>
+    <body onload="iconListReset()">
         <div class="layout">
             <header>
                 <h1>Edit Dashboard</h1>
-                <a id="savebnt" >Save & Back</a>
-                <a id="cancelbnt" >Discard</a>
+                <a id="savebnt">Save & Back</a>
+                <a id="cancelbnt">Discard</a>
+                <a id="resetIcon">Reset Icon search</a>
             </header>
             <main id="editorbox"></main>
             <aside>
                 <header><h2>Search icon</h2></header>
                 <section>
-                  <iframe width="100%" height="100%" src="https://icons8.com/line-awesome" frameborder="0"></iframe>
+                    <iframe
+                        id="iconView"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                    ></iframe>
                 </section>
-                <footer>
+                <footer  class="hidden">
                     <input id="searchinput" type="text" />
                 </footer>
             </aside>
@@ -57,12 +63,12 @@
                         value: "",
                         language: "json",
                         renderWhitespace: "all",
-                        theme: "vs-dark"
+                        theme: "vs-dark",
                     },
                 );
                 (async () => {
-                  await editMain(editor);
-              })();
+                    await editMain(editor);
+                })();
             });
         </script>
     </body>

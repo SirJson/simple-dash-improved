@@ -17,7 +17,6 @@ async function configData() {
     } else {
         console.info("Loading config from local storage");
         config = JSON.parse(configJson);
-        console.log(config);
     }
     return config;
 }
