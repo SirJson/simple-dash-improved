@@ -1,0 +1,48 @@
+{
+    "short_name": "Dashboard",
+    "name": "My local dashboard",
+    "description": "Self-hosted intranet dashboard",
+    "icons": [
+        {
+            "src": "/icons/dash192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/icons/dash512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/index.html",
+    "background_color": "#0063b1",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#0063b1",
+    "shortcuts": [
+        {
+            "name": "Show user dashboard",
+            "short_name": "Dashboard",
+            "description": "Shows the main dashboard",
+            "url": "/index.html",
+            "icons": [
+                {
+                    "src": "/icons/dash192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "Customize Dashboard",
+            "short_name": "Customize",
+            "description": "Customize the dashboard locally",
+            "url": "/edit.html",
+            "icons": [
+                {
+                    "src": "/icons/edit192.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ]
+}

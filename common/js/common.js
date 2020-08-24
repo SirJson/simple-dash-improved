@@ -21,17 +21,6 @@ async function configData() {
     return config;
 }
 
-function addTriangleTo(target) {
-    let dimensions = target.getClientRects()[0];
-    let pattern = Trianglify({
-        width: dimensions.width,
-        height: dimensions.height,
-    });
-
-    target.style["background-image"] = "url(" + pattern.png() + ")";
-    target.style["background-size"] = "cover";
-}
-
 function fail(why) {
     const text = "Error: " + why;
     console.error(text);
