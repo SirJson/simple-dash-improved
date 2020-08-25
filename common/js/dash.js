@@ -25,7 +25,12 @@ async function main() {
 
     const config = await configData();
 
-    document.body.classList.add(config.blendmodes[getRandomInt(0, config.blendmodes.length)]);
+    if(BGPATTERNS.indexOf(config.background) < 0) {
+        console.error("Unknown background value. Fallback to 'gradiant'",config.background);
+        config.background = "gradiant";
+    }
+
+    document.body.classList.add(config.blendmodes[getRandomInt(0, config.blendmodes.length)], `${config.background}-background`);
 
     renderConfig(config);
 }

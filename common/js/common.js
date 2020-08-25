@@ -11,12 +11,18 @@ const ALLBGMODES = [
     "soft-light"
 ];
 
-const CURRENT_SCHEMA_VERSION = 3;
+const BGPATTERNS = [
+    "gradiant",
+    "geometry"
+]
+
+const CURRENT_SCHEMA_VERSION = 4;
 
 const SCHEMA_UPDATES = [
     (cfg) => {},
     (cfg) => {delete cfg.title; cfg.schemaVersion = 2;},
     (cfg) => {cfg.blendmodes = ALLBGMODES; cfg.schemaVersion = 3;},
+    (cfg) => {cfg.background = "gradiant"; cfg.schemaVersion = 4;},
 ]
 
 async function configData() {

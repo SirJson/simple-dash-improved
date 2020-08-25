@@ -6,29 +6,49 @@ body {
 }
 body {
     z-index: 1;
-    background:
-    linear-gradient(
-        rgb(35, 21, 87),
-        transparent
-    ),
-    linear-gradient(
-        90deg,
-        rgb(68, 16, 122),
-        transparent
-    ),
-    linear-gradient(
-        -45deg,
-        rgb(255, 19, 97),
-        transparent
-    ),
-    linear-gradient(
-        -90deg,
-        rgb(255, 248, 0) ,
-        transparent
-    );
 
     background-position: center;
     background-attachment: fixed;
+}
+
+.gradiant-background {
+    background: linear-gradient(rgb(35, 21, 87), transparent),
+        linear-gradient(90deg, rgb(68, 16, 122), transparent),
+        linear-gradient(-45deg, rgb(255, 19, 97), transparent),
+        linear-gradient(-90deg, rgb(255, 248, 0), transparent);
+}
+
+.geometry-background {
+    background: repeating-linear-gradient(
+            50deg,
+            #f7a37b,
+            #f7a37b 2em,
+            #ffdea8 2em,
+            #ffdea8 4em,
+            #d0e4b0 4em,
+            #d0e4b0 6em,
+            #7cc5d0 6em,
+            #7cc5d0 8em,
+            #00a2e1 8em,
+            #00a2e1 10em,
+            #0085c8 10em,
+            #0085c8 12em
+        ),
+        repeating-linear-gradient(
+            -50deg,
+            #f7a37b,
+            #f7a37b 2em,
+            #ffdea8 2em,
+            #ffdea8 4em,
+            #d0e4b0 4em,
+            #d0e4b0 6em,
+            #7cc5d0 6em,
+            #7cc5d0 8em,
+            #00a2e1 8em,
+            #00a2e1 10em,
+            #0085c8 10em,
+            #0085c8 12em
+        );
 }
 
 .saturation {
@@ -70,7 +90,6 @@ body {
 .soft-light {
     background-blend-mode: soft-light;
 }
-
 
 #wrapper {
     height: 100%;
