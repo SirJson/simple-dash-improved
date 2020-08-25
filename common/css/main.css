@@ -107,24 +107,38 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
     border-color: transparent;
     border-style: solid;
-    font-size: 3rem;
-    width: 60%;
+    font-size: 1.5rem;
+    width: 65vw;
     color: #fff;
     font-weight: 300;
-    font-family: 'Source Sans Pro';
-    padding: 15px 15px 15px 2em;
+    font-family: "Source Sans Pro";
+    padding: 15px 15px 15px 2.5em;
     margin: 0 auto;
 }
 
-
 .overlayicon {
-	position: absolute;
-	color: white;
-	width: 60%;
-	pointer-events: none;
-	margin-right: 1em;
-	font-size: 2.5em;
-	text-align: left;
+    position: absolute;
+    color: white;
+    width: 65vw;
+    pointer-events: none;
+    margin-right: 1em;
+    font-size: 1.5em;
+    text-align: left;
+    right: 15vw;
+}
+
+@media only screen and (min-width: 1024px) {
+    #gsearch {
+        font-size: 3rem;
+        width: 60vw;
+        padding: 15px 15px 15px 2em;
+    }
+
+    .overlayicon {
+        width: 60vw;
+        font-size: 2.5em;
+        right: 19vw;
+    }
 }
 
 #wrapper {
@@ -132,6 +146,7 @@ body {
     display: grid;
     grid-template-rows: 0.5fr 1fr 4fr 1fr;
     grid-template-columns: repeat(3, 1fr);
+    row-gap: 16px;
 }
 #toolbar {
     grid-row: 1;
@@ -172,7 +187,10 @@ body {
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 4em;
+    align-self: center;
+    justify-self: center;
 }
+
 #itemlist > * {
     padding: 15px;
     margin: 0 auto;
