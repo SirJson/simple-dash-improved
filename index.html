@@ -5,6 +5,7 @@
         <meta name="description" content="A customizable selfhosted dashboard">
         <title>My Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preload" type="text/css" href="/common/css/fonts.css" as="style">
         <link rel="stylesheet" type="text/css" href="common/css/fork-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="common/css/v5-compat.min.css" />
         <link rel="stylesheet" type="text/css" href="common/css/line-awesome.min.css" />
@@ -20,7 +21,7 @@
             </div>
             <form action="https://google.com/search" id="searchform" method="get">
                 <i class="fa fa-google overlayicon"></i>
-                <input type="text" name="q" id="gsearch">
+                <input placeholder="Search..." type="text" name="q" id="gsearch">
             </form>
             <div id="itemlist">
                 <a title="Loading..."><i class="fa-spin fas fa-spinner fa-fw"></i></a>
