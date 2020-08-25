@@ -22,7 +22,6 @@ function getRandomInt(min, max) {
 }
 
 async function main() {
-
     const config = await configData();
 
     if(BGPATTERNS.indexOf(config.background) < 0) {
@@ -31,7 +30,9 @@ async function main() {
     }
 
     document.body.classList.add(config.blendmodes[getRandomInt(0, config.blendmodes.length)], `${config.background}-background`);
-
+    const searchbar = document.getElementById("gsearch");
+    searchbar.focus();
+    searchbar.select();
     renderConfig(config);
 }
 
