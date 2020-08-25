@@ -1,4 +1,5 @@
 
+
 function renderConfig(config) {
     let itemlistHTML = "";
     for (let i = 0; i < config.items.length; i++) {
@@ -14,9 +15,17 @@ function renderConfig(config) {
     }
     document.getElementById("itemlist").innerHTML = itemlistHTML;
 }
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+}
 
 async function main() {
+
     const config = await configData();
+
+    document.body.classList.add(config.blendmodes[getRandomInt(0, config.blendmodes.length)]);
 
     renderConfig(config);
 }

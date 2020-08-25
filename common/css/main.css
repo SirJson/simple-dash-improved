@@ -6,10 +6,71 @@ body {
 }
 body {
     z-index: 1;
-    background: linear-gradient(45deg, rgba(4, 23, 92, 0.45) 0%, rgba(4, 23, 92, 0.45) 25%,rgba(23, 46, 132, 0.45) 25%, rgba(23, 46, 132, 0.45) 50%,rgba(42, 70, 173, 0.45) 50%, rgba(42, 70, 173, 0.45) 75%,rgba(61, 93, 213, 0.45) 75%, rgba(61, 93, 213, 0.45) 100%),linear-gradient(135deg, rgb(8, 63, 29) 0%, rgb(8, 63, 29) 25%,rgb(39, 70, 68) 25%, rgb(39, 70, 68) 50%,rgb(69, 77, 107) 50%, rgb(69, 77, 107) 75%,rgb(100, 84, 146) 75%, rgb(100, 84, 146) 100%);
+    background:
+    linear-gradient(
+        rgb(35, 21, 87),
+        transparent
+    ),
+    linear-gradient(
+        90deg,
+        rgb(68, 16, 122),
+        transparent
+    ),
+    linear-gradient(
+        -45deg,
+        rgb(255, 19, 97),
+        transparent
+    ),
+    linear-gradient(
+        -90deg,
+        rgb(255, 248, 0) ,
+        transparent
+    );
+
     background-position: center;
     background-attachment: fixed;
 }
+
+.saturation {
+    background-blend-mode: saturation;
+}
+
+.difference {
+    background-blend-mode: difference;
+}
+
+.hue {
+    background-blend-mode: hue;
+}
+
+.multiply {
+    background-blend-mode: multiply;
+}
+
+.luminosity {
+    background-blend-mode: luminosity;
+}
+
+.color {
+    background-blend-mode: color;
+}
+
+.screen {
+    background-blend-mode: screen;
+}
+
+.exclution {
+    background-blend-mode: exclusion;
+}
+
+.hard-light {
+    background-blend-mode: hard-light;
+}
+
+.soft-light {
+    background-blend-mode: soft-light;
+}
+
 
 #wrapper {
     height: 100%;

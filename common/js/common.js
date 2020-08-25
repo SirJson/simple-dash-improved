@@ -1,3 +1,24 @@
+const ALLBGMODES = [
+    "saturation",
+    "difference",
+    "hue",
+    "multiply",
+    "luminosity",
+    "color",
+    "screen",
+    "exclution",
+    "hard-light",
+    "soft-light"
+];
+
+const CURRENT_SCHEMA_VERSION = 3;
+
+const SCHEMA_UPDATES = [
+    (cfg) => {},
+    (cfg) => {delete cfg.title; cfg.schemaVersion = 2;},
+    (cfg) => {cfg.blendmodes = ALLBGMODES; cfg.schemaVersion = 3;},
+]
+
 async function configData() {
     const configJson = window.localStorage.getItem("config");
     let config = null;
@@ -17,6 +38,15 @@ async function configData() {
     } else {
         console.info("Loading config from local storage");
         config = JSON.parse(configJson);
+        while(config.schemaVersion < CURRENT_SCHEMA_VERSION) {
+            const currentVer = config.schemaVersion;
+            const nextVer = currentVer + 1;
+            console.info(`Upgrading schema from version ${currentVer} to version ${nextVer}`);
+            SCHEMA_UPDATES[currentVer](config);
+            console.info(`Current schema version is ${config.schemaVersion}`);
+            window.localStorage.setItem("config", JSON.stringify(config));
+
+        }
     }
     return config;
 }

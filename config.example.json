@@ -1,5 +1,5 @@
 {
-    "schemaVersion": 2,
+    "schemaVersion": 3,
     "items" : [
         {
             "alt" : "Github",
@@ -16,5 +16,17 @@
             "icon" : "fab fa-docker",
             "link" : "https://hub.docker.com/u/kukielka/"
         }
+    ],
+    "blendmodes": [
+        "saturation",
+        "difference",
+        "hue",
+        "multiply",
+        "luminosity",
+        "color",
+        "screen",
+        "exclution",
+        "hard-light",
+        "soft-light"
     ]
 }
