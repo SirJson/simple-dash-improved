@@ -1,5 +1,5 @@
 {
-    "schemaVersion": 3,
+    "schemaVersion": 4,
     "items" : [
         {
             "alt" : "Github",
@@ -28,5 +28,6 @@
         "exclution",
         "hard-light",
         "soft-light"
-    ]
+    ],
+    "background": "gradiant"
 }

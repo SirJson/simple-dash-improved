@@ -30,7 +30,7 @@ async function configData() {
     let config = null;
 
     if (!configJson) {
-        const setupFile = await fetch("config.json");
+        const setupFile = await fetch("config.default.json");
         if (!setupFile.ok) {
             fail(
                 `Failed to load setup file (${setupFile.status}): ${setupFile.statusText}`,
