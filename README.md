@@ -13,5 +13,5 @@ This is my personal fork of simple-dash where I want to give back some mods and 
 
 ## Upcoming
 
-- A Chrome / Firefox-like Online Search bar
+- Full PWA support
 - Fuzzy search icons and their class names inside the customization editor.
